@@ -8,7 +8,7 @@ def keywordTable(mot_clé,file):
   df = pd.DataFrame(list(set(mot_clé)),columns=['mot_clé'])
   df['occurrence'] = df['mot_clé'].apply(lambda x: keyword_importance(x,file)[0])
   df['tf'] = df['mot_clé'].apply(lambda x: keyword_importance(x,file)[1])
-  df['idf'] = df['mot_clé'].apply(lambda x: keyword_importance(x,file)[2])
-  df['tf_idf'] = df['mot_clé'].apply(lambda x: keyword_importance(x,file)[3])
+  #df['idf'] = df['mot_clé'].apply(lambda x: keyword_importance(x,file)[2])
+  #df['tf_idf'] = df['mot_clé'].apply(lambda x: keyword_importance(x,file)[3])
   return(df)
 
